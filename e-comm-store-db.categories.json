@@ -1,0 +1,56 @@
+[{
+  "_id": {
+    "$oid": "677caa572809b25b562f0c13"
+  },
+  "name": "Sports Update",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "677caa932809b25b562f0c15"
+  },
+  "name": "Mobiles",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "677caaa22809b25b562f0c17"
+  },
+  "name": "Electronics",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "677cac1b2809b25b562f0c19"
+  },
+  "name": "Home & Furniture",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "677cac2e2809b25b562f0c1b"
+  },
+  "name": "Fashion",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "677cac402809b25b562f0c1d"
+  },
+  "name": "Grocery",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "677cb7ed6f47fbbaa35316c4"
+  },
+  "name": "Test",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "677cb824d3cc3ab1e570d64d"
+  },
+  "name": "Test",
+  "__v": 0
+}]
