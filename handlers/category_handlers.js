@@ -5,6 +5,11 @@ async function getCategories() {
   return categories.map((category) => category.toObject());
 }
 
+async function getCategorById(id) {
+  let category = await Category.findById(id);
+  return category.toObject();
+}
+
 async function addCategory(model) {
   let category = new Category({
     name: model.name,
@@ -28,4 +33,5 @@ module.exports = {
   updateCategory,
   deleteCategory,
   getCategories,
+  getCategorById
 };

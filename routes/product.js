@@ -1,16 +1,16 @@
 const express = require("express");
 const router = express.Router();
 const {
-  addCategory,
-  updateCategory,
-  deleteCategory,
-  getCategories,
-  getCategorById,
-} = require("../handlers/category_handlers");
+  addProduct,
+  updateProduct,
+  deleteProduct,
+  getProducts,
+  getProductById,
+} = require("../handlers/product_handler");
 
 router.get("", async (req, res) => {
   try {
-    let result = await getCategories();
+    let result = await getProducts();
     res.send(result);
   } catch (error) {
     res.status(400).json({ error });
@@ -20,7 +20,7 @@ router.get("", async (req, res) => {
 router.get("/:id", async (req, res) => {
   try {
     let id = req.params["id"];
-    let result = await getCategorById(id);
+    let result = await getProductById(id);
     res.send(result);
   } catch (error) {
     res.status(400).json({ error });
@@ -30,8 +30,8 @@ router.get("/:id", async (req, res) => {
 router.post("", async (req, res) => {
   try {
     let model = req.body;
-    let result = await addCategory(model);
-    res.send({ message: "Category added successfully", result });
+    let result = await addProduct(model);
+    res.send({ message: "Product added successfully", result });
   } catch (error) {
     res.status(400).json({ error });
   }
@@ -41,8 +41,8 @@ router.put("/:id", async (req, res) => {
   try {
     let model = req.body;
     let id = req.params["id"];
-    await updateCategory(id, model);
-    res.send({ message: "Category updated successfully" });
+    await updateProduct(id, model);
+    res.send({ message: "Product updated successfully" });
   } catch (error) {
     res.status(400).json({ error });
   }
@@ -51,8 +51,8 @@ router.put("/:id", async (req, res) => {
 router.delete("/:id", async (req, res) => {
   try {
     let id = req.params["id"];
-    await deleteCategory(id);
-    res.send({ message: "Category deleted successfully" });
+    await deleteProduct(id);
+    res.send({ message: "Product deleted successfully" });
   } catch (error) {
     res.status(400).json({ error });
   }
